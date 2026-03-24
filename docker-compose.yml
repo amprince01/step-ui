@@ -11,6 +11,8 @@ services:
       - DB_PATH=/app/data/certs.db
       - PORT=8080
       - STEPPATH=/tmp/step-nonexistent
+    env_file:
+      - .env
     volumes:
       - ./data:/app/data
     restart: unless-stopped
@@ -23,6 +25,8 @@ services:
       - NEXT_PUBLIC_API_URL=http://localhost:8080
     depends_on:
       - backend
+    env_file:
+      - .env
     restart: unless-stopped
 
 volumes:
