@@ -8,14 +8,8 @@ echo "🚀 Setting up Step-CA Web UI..."
 echo "📦 Repository: https://github.com/marcin-kruszynski/step-ui.git"
 
 # Check if Docker is installed
-if ! command -v docker &> /dev/null; then
-    echo "❌ Docker is not installed. Please install Docker first."
-    exit 1
-fi
-
-# Check if docker compose is available
-if ! docker compose version &> /dev/null; then
-    echo "❌ Docker Compose is not available. Please ensure Docker Desktop is running and WSL integration is enabled."
+if ! command -v podman &> /dev/null; then
+    echo "❌ Podman is not installed. Please install Podman first."
     exit 1
 fi
 
